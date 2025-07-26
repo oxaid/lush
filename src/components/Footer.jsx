@@ -6,7 +6,7 @@ import footerBearRight from '../assets/footer-bear-right.png'
 
 export default function Footer() {
   return (
-    <footer className="relative bg-notebook pt-10 pb-32 md:py-28 px-6 md:px-12">
+    <footer className="relative bg-notebook pt-10 pb-40 md:py-28 px-6 md:px-12">
       <div className="max-w-4xl mx-auto flex flex-col text-center">
         {/* Title */}
         <h2 className="uppercase text-4xl lg:text-5xl text-center font-bold text-black mb-10">

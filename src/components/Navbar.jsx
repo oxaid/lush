@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className="w-full">
       <div className="max-w-6xl mx-auto px-8 sm:px-10 md:px-14 lg:px-16 py-4 flex items-center justify-between">
         {/* LEFT: Logo */}
-        <div className="text-2xl md:text-3xl font-extrabold uppercase">$LUSH</div>
+        <div className="text-4xl md:text-3xl font-extrabold uppercase">$LUSH</div>
 
         {/* CENTER: Menu Items (Desktop Only) */}
         <ul className="hidden md:flex items-center gap-4 text-sm font-bold uppercase">
@@ -55,7 +55,7 @@ export default function Navbar() {
           className="md:hidden bg-secondary p-2 rounded"
           onClick={() => setIsOpen(true)}
         >
-          <FiMenu size={20} />
+          <FiMenu size={24} />
         </button>
       </div>
 
