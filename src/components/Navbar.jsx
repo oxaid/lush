@@ -55,7 +55,7 @@ export default function Navbar() {
           className="md:hidden bg-secondary p-2 rounded"
           onClick={() => setIsOpen(true)}
         >
-          <FiMenu size={24} />
+          <FiMenu size={28} />
         </button>
       </div>
 
