@@ -1,0 +1,45 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Londrina Solid', cursive;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+
+.scrollbar-hide {
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE 10+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;                  /* Chrome, Safari */
+}
+
+
+/* Global responsive background */
+.responsive-bg {
+  background-image: url('/src/assets/notebook.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  font-family: 'Londrina Solid', cursive;
+}
+
+
+@layer utilities {
+  .bg-main {
+    background-image: url('/images/bg-main.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
