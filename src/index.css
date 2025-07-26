@@ -34,6 +34,14 @@ html, body {
   font-family: 'Londrina Solid', cursive;
 }
 
+ .custom-bullet {
+    background-image: url('/images/bullet-inactive.png');
+    background-size: cover;
+  }
+  .custom-bullet.swiper-pagination-bullet-active {
+    background-image: url('/images/bullet-active.png');
+  }
+
 
 @layer utilities {
   .bg-main {

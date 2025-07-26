@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 // Gambar gallery (import sesuai urutan)
 import lush1 from '../assets/gallery/lush1.png'
@@ -36,24 +40,57 @@ export default function GallerySection() {
       </div>
 
       {/* Mobile Carousel */}
-      <div className="md:hidden border-4 border-black p-4 bg-white max-w-md mx-auto relative">
+      {/* <div className="md:hidden border-4 border-black p-4 bg-white max-w-md mx-auto relative">
         <img
           src={galleryImages[current]}
           alt={`LUSH ${current + 1}`}
-          className="w-full object-contain rounded-md mb-4"
+          className="w-full object-contain rounded-md "
         />
 
-        {/* Pagination Dots */}
-        <div className="flex justify-center gap-2 mt-2">
-          {galleryImages.map((_, i) => (
-            <button
-              key={i}
-              className={`h-2 w-2 rounded-full ${i === current ? 'bg-black' : 'bg-gray-400'}`}
-              onClick={() => setCurrent(i)}
-            />
+
+      </div> */}
+
+      {/* Mobile Swiper Carousel */}
+      <div className="md:hidden max-w-md mx-auto px-4">
+        <Swiper
+          modules={[Pagination]}
+          pagination={{
+            el: '.custom-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return `<img src="/images/bullet-inactive.png" class="${className} h-12 w-12 mx-1" />`
+            }
+          }}
+          className="relative"
+        >
+          {galleryImages.map((src, i) => (
+            <SwiperSlide key={i}>
+              <div className="border-4 border-black p-4 bg-white">
+                <img
+                  src={src}
+                  alt={`LUSH ${i + 1}`}
+                  className="w-full object-contain rounded-md"
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
+
+      <div className="md:hidden custom-pagination mt-4 flex justify-center" />
+
+
+
+      {/* Pagination Dots */}
+      {/* <div className="flex justify-center gap-2 mt-6">
+        {galleryImages.map((_, i) => (
+          <button
+            key={i}
+            className={`h-2 w-2 rounded-full ${i === current ? 'bg-black' : 'bg-gray-400'}`}
+            onClick={() => setCurrent(i)}
+          />
+        ))}
+      </div> */}
     </section>
   )
 }
