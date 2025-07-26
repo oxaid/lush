@@ -35,12 +35,12 @@ export default function Footer() {
         <img
           src={footerBearLeft}
           alt="Bear Left"
-          className="absolute bottom-0 left-0 max-w-[200px] md:max-w-[300px] lg:max-w-[400px]"
+          className="absolute bottom-0 left-0 max-w-[150px] md:max-w-[300px] lg:max-w-[400px]"
         />
         <img
           src={footerBearRight}
           alt="Bear Right"
-          className="absolute bottom-0 right-0 max-w-[200px] md:max-w-[300px] lg:max-w-[400px]"
+          className="absolute bottom-0 right-0 max-w-[150px] md:max-w-[300px] lg:max-w-[400px]"
         />
     </footer>
   )
