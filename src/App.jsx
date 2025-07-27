@@ -8,6 +8,7 @@ import HowToBuy from './components/HowToBuy'
 import Faq from './components/Faq'
 import Footer from './components/Footer'
 import Gallery from './components/Gallery'
+import ScrollToTopButton  from './components/ScrollToTopButton'
 import notebookBg from './assets/notebook.png';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <div id="faq">
         <Faq />
       </div>
+      <ScrollToTopButton />
       <Footer />
     </div>
   )

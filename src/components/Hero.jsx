@@ -3,7 +3,7 @@ import lushImg from '../assets/hero.png'
 
 export default function Hero() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-8 sm:px-10 md:px-14 lg:px-16 py-10 md:py-20 max-w-6xl mx-auto">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-8 sm:px-10 md:px-14 lg:px-16 py-10 pt-24 md:py-20 md:pt-32 max-w-6xl mx-auto">
   {/* IMAGE FIRST ON MOBILE */}
   <div className="w-full max-w-sm mx-auto order-1 md:order-2">
     <img

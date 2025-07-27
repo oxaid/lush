@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FiMenu, FiX, FiSend, FiXCircle, FiZap } from "react-icons/fi"
+import { FiMenu, FiX } from "react-icons/fi"
 import telegramIcon from '../assets/telegram.png'
 import xIcon from '../assets/x.png'
 import dexToolsIcon from '../assets/dextools.png'
@@ -15,11 +15,9 @@ export default function Navbar() {
     { label: "FAQ", id: "faq" },
   ]
 
-
-
   return (
-    <nav className="w-full">
-      <div className="max-w-6xl mx-auto px-8 sm:px-10 md:px-14 lg:px-16 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm bg-white/30 border-b border-white/20 shadow-sm">
+  <div className="max-w-6xl mx-auto px-8 sm:px-10 md:px-14 lg:px-16 py-4 flex items-center justify-between">
         {/* LEFT: Logo */}
         <div className="text-4xl md:text-3xl font-extrabold uppercase">$LUSH</div>
 
@@ -41,7 +39,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-2">
           {[telegramIcon, xIcon, dexToolsIcon].map((icon, i) => (
             <a
-              href=''
+              href=""
               key={i}
               className="bg-secondary p-2 rounded hover:bg-yellow-500 transition cursor-pointer"
             >
@@ -61,7 +59,7 @@ export default function Navbar() {
 
       {/* MOBILE FULLSCREEN MENU */}
       {isOpen && (
-        <div className="fixed inset-0 bg-[#2B2B2B] text-white flex flex-col items-center justify-center z-50">
+        <div className="fixed inset-0 bg-[#2B2B2B] text-white flex flex-col items-center justify-center z-[999]">
           {/* Close */}
           <button
             className="absolute top-6 right-6 text-secondary"
@@ -87,7 +85,7 @@ export default function Navbar() {
             <div className="flex gap-4 mt-6">
               {[telegramIcon, xIcon, dexToolsIcon].map((icon, i) => (
                 <a
-                  href=''
+                  href=""
                   key={i}
                   className="bg-secondary p-3 rounded hover:bg-yellow-500 transition cursor-pointer"
                 >
